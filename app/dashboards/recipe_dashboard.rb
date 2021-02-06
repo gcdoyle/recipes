@@ -8,9 +8,9 @@ class RecipeDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    recipe_ingredients: Field::NestedHasMany.with_options(skip: :recipe),
+    # recipe_ingredients: Field::HasMany,
     # recipe_ingredients: Field::ScopedHasMany.with_options(scope: -> (field) { field.data.first.qty } ),
-    ingredients: Field::HasMany,
+    recipe_ingredients: Field::NestedHasMany.with_options(skip: :recipe),
     categories: Field::HasMany,
     id: Field::Number,
     name: Field::String,
@@ -38,7 +38,6 @@ class RecipeDashboard < Administrate::BaseDashboard
   name
   cooking_time
   prep_time
-  ingredients
   servings
   directions
   categories
@@ -77,6 +76,6 @@ class RecipeDashboard < Administrate::BaseDashboard
   # end
 
   def permitted_attributes
-    super + [recipe_ingredient_attributes: [:qty, :id, :ingredient, :recipe]]
+    super + [:ingredient_id, recipe_ingredient_attributes: [:qty, :id, :ingredient_id, :recipe_id]]
   end
 end

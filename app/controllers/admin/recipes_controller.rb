@@ -40,7 +40,15 @@ module Admin
     #     transform_values { |value| value == "" ? nil : value }
     # end
 
+    def resource_params
+      # binding.pry
+      params.require(resource_class.model_name.param_key).
+        permit(dashboard.permitted_attributes << :ingredient_id).
+        transform_values { |v| read_param_value(v) }
+    end
+
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
+
   end
 end

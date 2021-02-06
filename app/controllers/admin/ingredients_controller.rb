@@ -42,5 +42,10 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
+    # def resource_params
+    #   params.require(resource_class.model_name.param_key).
+    #     permit(dashboard.permitted_attributes << :my_params).
+    #     transform_values { |v| read_param_value(v) }
+    # end
   end
 end

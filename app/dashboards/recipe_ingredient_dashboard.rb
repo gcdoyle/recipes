@@ -12,6 +12,10 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
     ingredient: Field::BelongsTo,
     id: Field::Number,
     qty: Field::Number,
+    measure: Field::Select.with_options(
+      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal"],
+      include_blank: true,
+      ),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -46,6 +50,7 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
   recipe
   ingredient
   qty
+  measure
   ].freeze
 
   # COLLECTION_FILTERS
