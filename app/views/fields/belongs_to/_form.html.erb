@@ -1,0 +1,7 @@
+<div class="field-unit__label">
+  <%= f.label field.permitted_attribute %>
+</div>
+<div class="field-unit__field">
+  <%# binding.pry %>
+    <%= collection_select(:recipe, :ingredient_id, Ingredient.all, :id, :name)%>
+</div>

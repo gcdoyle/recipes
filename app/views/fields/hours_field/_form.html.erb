@@ -1,0 +1,7 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute, for: "#{f.object_name}_#{field.attribute}" %> <p style="height:1rem"></p>
+</div>
+<div class="field-unit__field">
+  <%= f.text_field field.attribute %>
+  <p class="text-muted"><%= t("manifold.default.fields.hours") %></p>
+</div>
