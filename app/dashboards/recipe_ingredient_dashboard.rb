@@ -9,11 +9,13 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     recipe: Field::BelongsTo,
-    ingredient: Field::BelongsTo,
+    ingredient: Field::BelongsTo.with_options(
+      order: "name"
+    ),
     id: Field::Number,
     qty: Field::Number,
     measure: Field::Select.with_options(
-      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal"],
+      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal","clove"],
       include_blank: true,
       ),
     created_at: Field::DateTime,

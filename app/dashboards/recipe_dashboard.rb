@@ -10,7 +10,9 @@ class RecipeDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     image: PhotoField,
     recipe_ingredients: Field::NestedHasMany.with_options(skip: :recipe),
-    categories: Field::HasMany,
+    categories: Field::HasMany.with_options(
+      order: "name"
+    ),
     id: Field::Number,
     name: Field::String,
     created_at: Field::DateTime,
