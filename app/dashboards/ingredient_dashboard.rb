@@ -8,8 +8,10 @@ class IngredientDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    image: PhotoField,
     recipe_ingredients: Field::HasMany,
     recipes: Field::HasMany,
+    url: StringLinkField,
     id: Field::Number,
     name: Field::String,
     created_at: Field::DateTime,
@@ -28,7 +30,9 @@ class IngredientDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
+  image
   name
+  url
   recipes
   ].freeze
 
@@ -37,6 +41,8 @@ class IngredientDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
   name
+  image
+  url
   ].freeze
 
   # COLLECTION_FILTERS

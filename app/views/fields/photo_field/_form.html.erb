@@ -1,0 +1,12 @@
+<div class="field-unit__label">
+  <%= f.label "Image Upload" %>
+</div>
+<div class="field-unit__field">
+	<% if field.data.attached? %>
+	  <%= image_tag field.data, style: "width:320px" %><br />
+    <%= f.file_field field.attribute %>
+    <%= link_to "Detach", { action: :detach }, data: { confirm: "Are you sure?" } %>
+  <% else %>
+	  <%= f.file_field field.attribute %>
+	<% end %>
+</div>
