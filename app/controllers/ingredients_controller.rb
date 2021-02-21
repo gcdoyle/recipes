@@ -1,5 +1,6 @@
 class IngredientsController < ApplicationController
   before_action :set_ingredient, only: %i[ show edit update destroy ]
+  include SetInstance
 
   # GET /ingredients or /ingredients.json
   def index
@@ -13,7 +14,7 @@ class IngredientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ingredient
-      @ingredient = Ingredient.find(params[:id])
+      find_instance
     end
 
     Only allow a list of trusted parameters through.

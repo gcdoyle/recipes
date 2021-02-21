@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[ show ]
+  include SetInstance
 
   # GET /recipes or /recipes.json
   def index
@@ -13,7 +14,7 @@ class RecipesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
-      @recipe = Recipe.find(params[:id])
+      @recipe = find_instance
     end
 
     # Only allow a list of trusted parameters through.

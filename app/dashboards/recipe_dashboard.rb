@@ -8,6 +8,8 @@ class RecipeDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+    slug: Field::String,
+    description: Field::Text,
     image: PhotoField,
     recipe_ingredients: Field::NestedHasMany.with_options(skip: :recipe),
     categories: Field::HasMany.with_options(
@@ -39,6 +41,7 @@ class RecipeDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
   image
   name
+  description
   cooking_time
   prep_time
   servings
@@ -52,6 +55,7 @@ class RecipeDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
   name
   image
+  description
   cooking_time
   prep_time
   recipe_ingredients
