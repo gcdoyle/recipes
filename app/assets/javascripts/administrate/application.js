@@ -1,7 +1,10 @@
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
+//= popper
 //= require selectize
 //= require moment
 //= require datetime_picker
+//= require trix
 //= require cocoon
 //= require_tree .

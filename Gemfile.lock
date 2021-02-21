@@ -73,6 +73,10 @@ GEM
       administrate (> 0.8, < 1)
       cocoon (~> 1.2, >= 1.2.11)
     administrate-field-scoped_has_many (0.2.0)
+    administrate-field-trix (0.0.3)
+      administrate (< 1.0.0)
+      rails (>= 4.1)
+      trix-rails (>= 0.11.4.1)
     autoprefixer-rails (10.2.0.0)
       execjs
     bindex (0.8.1)
@@ -228,6 +232,8 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    trix-rails (2.3.0)
+      rails (> 4.1, < 7.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -260,6 +266,7 @@ DEPENDENCIES
   administrate
   administrate-field-nested_has_many
   administrate-field-scoped_has_many
+  administrate-field-trix
   bootsnap (>= 1.4.2)
   bootstrap
   byebug
@@ -277,6 +284,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  trix-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)

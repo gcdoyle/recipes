@@ -28,6 +28,8 @@ gem 'mini_magick'
 gem 'administrate'
 gem 'administrate-field-nested_has_many'
 gem 'administrate-field-scoped_has_many'
+gem 'trix-rails', require: 'trix'
+gem 'administrate-field-trix'
 gem 'bootstrap'
 gem 'friendly_id'
 
