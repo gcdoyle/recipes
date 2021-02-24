@@ -3,20 +3,20 @@
 
 <div class="container">
 
-<h1>Recipes by Category</h1>
+<h1 class="mt-4">Recipes by Category</h1>
 
-  <div class="row mt-5">
+  <div class="row mt-4">
     <% @cards.each do |card| %>
-    <div class="card" style="width:400px">
+    <div class="col-4 card p-2" style="border: 0">
     
-      <div class="card-body">
-        <h4 class="card-title text-center">
-          <%= link_to card.keys.first.to_s, category_path(card.keys.first.downcase.to_param), class: "stretched-link" %>
+      <div class="card-body p-0" style="border: solid #ccc 1px;border-radius:7px;overflow:hidden;">
+        <h4 class="card-title text-center p-2 mb-0" style="background-color: olive;">
+          <%= link_to card.keys.first.to_s, category_path(card.keys.first.downcase.to_param), class: "stretched-link", style: "color: black" %>
         </h4>
         <p class="card-text">
           <%= image_tag card.values.first.image.variant(resize_to_limit: [240, 240]), 
-                                          class: "card-img-top",
-                                          style: "max-width:100%;min-width:100%;width:100%"
+                                          class: "card-img-bottom",
+                                          style: "max-=height:240px;height:240px;max-width:100%;min-width:100%;width:100%"
                                           %>
         </p>
       </div>

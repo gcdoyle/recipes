@@ -1,7 +1,7 @@
 module Admin
   class RecipesController < Admin::ApplicationController
     include Admin::Detachable
-    before_action :set_tabs, only: [:edit]
+    before_action :set_tabs, only: [:edit, :new]
 
     def set_tabs
       @tab_names = ["recipe","ingredients","directions","categories"]

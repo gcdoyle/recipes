@@ -63,4 +63,9 @@ class IngredientDashboard < Administrate::BaseDashboard
   def display_resource(ingredient)
     ingredient.name
   end
+
+
+  def default_sort
+    { order: :name, direction: :asc }
+  end
 end

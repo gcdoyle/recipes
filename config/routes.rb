@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :menus
   namespace :admin do
     resources :recipes
     resources :ingredients

@@ -1,10 +1,10 @@
 class IngredientsController < ApplicationController
-  before_action :set_ingredient, only: %i[ show edit update destroy ]
+  before_action :set_ingredient, only: %i[ show edit ]
   include SetInstance
 
   # GET /ingredients or /ingredients.json
   def index
-    @ingredients = Ingredient.all
+    @ingredients = Ingredient.all.order(:name)
   end
 
   # GET /ingredients/1 or /ingredients/1.json
@@ -17,8 +17,4 @@ class IngredientsController < ApplicationController
       find_instance
     end
 
-    Only allow a list of trusted parameters through.
-    def ingredient_params
-      params.require(:ingredient).permit(:title, :ingredient_id)
-    end
 end

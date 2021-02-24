@@ -50,5 +50,10 @@ module Admin
     #     permit(dashboard.permitted_attributes << :my_params).
     #     transform_values { |v| read_param_value(v) }
     # end
+
+    def default_sort
+      { order: :name, direction: :asc }
+    end
+
   end
 end

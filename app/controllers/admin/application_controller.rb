@@ -8,6 +8,18 @@ module Admin
   class ApplicationController < Administrate::ApplicationController
     before_action :authenticate_admin
 
+    def order
+      @order ||= Administrate::Order.new(
+        params.fetch(resource_name, {}).fetch(:order, default_sort[:order]),
+        params.fetch(resource_name, {}).fetch(:direction, default_sort[:direction]),
+      )
+    end
+
+    # override this in specific controllers as needed
+    def default_sort
+      { order: :name, direction: :asc }
+    end
+
     def authenticate_admin
       # TODO Add authentication logic here.
     end
