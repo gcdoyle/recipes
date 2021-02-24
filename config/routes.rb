@@ -24,6 +24,6 @@ Rails.application.routes.draw do
   resources :recipes
   resources :categories
 
-  root to: "recipes#index"
+  root to: "categories#index"
 
 end
