@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
   <% @recipes.each do |recipe| %>
-    <div class="col col-4 text-center" style="border: solid black 1px">
+    <div class="col col-4 mt-4 text-center" style="border: solid black 1px">
       <%= image_tag recipe.image.variant(resize_to_limit: [240, 240]), 
                                         class: "decorative", alt: "" 
                                         %>

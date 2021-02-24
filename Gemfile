@@ -30,8 +30,11 @@ gem 'administrate-field-nested_has_many'
 gem 'administrate-field-scoped_has_many'
 gem 'trix-rails', require: 'trix'
 gem 'administrate-field-trix'
-gem 'bootstrap'
 gem 'friendly_id'
+gem 'bootstrap'
+gem 'bootstrap-select-rails'
+# gem 'bootstrap-sass'
+gem "popper_js", "~> 1.16.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

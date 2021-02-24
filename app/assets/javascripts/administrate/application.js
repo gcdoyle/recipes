@@ -7,4 +7,5 @@
 //= require datetime_picker
 //= require trix
 //= require cocoon
+//= require bootstrap-select
 //= require_tree .
