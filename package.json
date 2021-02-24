@@ -1,19 +1,12 @@
 {
   "name": "recipes",
   "private": true,
-  "license": "BSD-3-Clause",
   "dependencies": {
-    "@rails/actioncable": "^6.0.0",
     "@rails/actiontext": "^6.0.3-4",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.3.0",
-    "flatpickr": "^4.6.9",
-    "trix": "^1.2.0",
-    "turbolinks": "^5.2.0"
+    "@rails/webpacker": "4.2.2",
+    "trix": "^1.2.0"
   },
-  "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.0"
   }
 }
