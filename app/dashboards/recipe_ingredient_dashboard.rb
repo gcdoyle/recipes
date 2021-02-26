@@ -15,7 +15,7 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
     id: Field::Number,
     qty: Field::Number,
     measure: Field::Select.with_options(
-      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal","clove"],
+      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal","clove","head","bunch"],
       include_blank: true,
       ),
     created_at: Field::DateTime,

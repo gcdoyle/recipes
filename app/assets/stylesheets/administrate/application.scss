@@ -30,6 +30,10 @@
 @import "utilities/text-color";
 @import "trix/dist/trix";
 
+.attribute-data--trix .trix-content {
+  min-height: 14px;
+}
+
 .tab-content {
   .tab-pane {
     display: none!important;

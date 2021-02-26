@@ -19,5 +19,5 @@ By default, the input is a text field.
   <%= f.label field.attribute %>
 </div>
 <div class="field-unit__field">
-  <%= f.number_field field.attribute, style: "width: 6em;display:inline-block" %>
+  <%= f.number_field field.attribute, style: "width: 6em;display:inline-block", step: "any", min: 0 %>
 </div>

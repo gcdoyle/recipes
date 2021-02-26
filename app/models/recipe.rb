@@ -8,6 +8,7 @@ class Recipe < ApplicationRecord
   has_one_attached :image
 
   has_rich_text :description
+  has_rich_text :directions
 
   accepts_nested_attributes_for :recipe_ingredients
   extend FriendlyId
