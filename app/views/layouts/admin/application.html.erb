@@ -21,7 +21,9 @@ By default, it renders:
   <title>
     <%= content_for(:title) %> - <%= application_title %>
   </title>
-  <%= render "stylesheet" %>
+  
+  <%= stylesheet_link_tag 'administrate/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
