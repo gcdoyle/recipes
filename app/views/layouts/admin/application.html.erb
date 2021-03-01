@@ -23,7 +23,7 @@ By default, it renders:
   </title>
   
   <%= stylesheet_link_tag 'administrate/application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+  <%= javascript_tag 'administrate/application', 'data-turbolinks-track': 'reload' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -37,7 +37,9 @@ By default, it renders:
       <%= yield %>
     </main>
   </div>
-
+<% content_for :javascript do %> 
+  <script type="text/javascript"> ... </script>
+<% end %>
   <%= render "javascript" %>
 </body>
 </html>
