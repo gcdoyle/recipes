@@ -8,6 +8,7 @@ by providing a `content_for(:javascript)` block.
 %>
 
 <% Administrate::Engine.javascripts.each do |js_path| %>
+<% binding.pry %>
   <%= javascript_include_tag js_path %>
 <% end %>
 
