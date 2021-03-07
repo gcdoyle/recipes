@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: recipes_production
-  username: recipes
+  username: gcdoyle
   password: <%= ENV['RECIPES_DATABASE_PASSWORD'] %>
