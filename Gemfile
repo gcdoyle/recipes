@@ -38,6 +38,8 @@ gem "popper_js", "~> 1.16.0"
 gem 'font-awesome-sass'
 gem 'mini_racer'
 
+gem 'devise'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

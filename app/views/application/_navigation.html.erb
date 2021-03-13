@@ -9,6 +9,12 @@
     <div class="btn-group ml-2 dropdown nav-item">
       <%= link_to "Admin", admin_recipes_url, style: "color:black;font-size:150%" %>
     </div>
+    <% if current_user %>
+    <div class="btn-group ml-2 dropdown nav-item">
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+    </div>
+    <% end %>
+
   </div>
 </div>
 <div style="background-color: gold; height:14px; width:100%;border-bottom: solid black 1px;"></div>
