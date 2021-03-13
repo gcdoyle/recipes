@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     root to: "recipes#index"
   end
 
+  controller :application do
+    get 'search' => :search
+  end
+
   resources :ingredients
   resources :recipes
   resources :categories

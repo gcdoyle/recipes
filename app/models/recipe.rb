@@ -28,4 +28,9 @@ class Recipe < ApplicationRecord
     name_changed? || slug.blank?
   end
     
+  def self.search(q)
+	  if q
+	    @recipes = Recipe.where("lower(name) LIKE ?", "%#{q}%".downcase).order(:name)
+		end
+	end
 end

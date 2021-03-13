@@ -1,0 +1,29 @@
+<div class="container" id="search-results">
+	<div class="row">
+		<div class="col">
+			<h1 class="mt-4">Searching for: <small><%= params[:q] %></small></h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-7 mt-4">
+			<% unless @recipes.blank? %>
+
+			<% @recipes.each do |recipe| %>
+
+			<div class="row book-row">
+				<div class="media">
+					<%= link_to image_tag(recipe.image, class: 'd-flex mr-3'), recipe_path(recipe) %>
+				</div>
+				<div class="media-body">
+					<h2><%= link_to recipe.name, recipe_path(recipe) %></h2>
+				</div>
+			</div>
+			<% end %>
+		<% else %>
+			<p style="padding-left: 35px;">No results found</p>
+		<% end %>
+		</div>
+
+  </div>
+
+</div>
