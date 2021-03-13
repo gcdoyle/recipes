@@ -11,7 +11,8 @@
     
       <div class="card-body p-0" style="border: solid #ccc 1px;border-radius:7px;overflow:hidden;">
         <h4 class="card-title text-center p-2 mb-0" style="background-color: olive;">
-          <%= link_to card.keys.first.to_s, category_path(card.keys.first.downcase.to_param), class: "stretched-link", style: "color: black" %>
+        <%# binding.pry %>
+          <%= link_to card.keys.first.to_s, category_path(card.keys.first.to_s.parameterize), class: "stretched-link", style: "color: black" %>
         </h4>
         <p class="card-text">
           <%= image_tag card.values.first.image.variant(resize_to_limit: [240, 240]), 
