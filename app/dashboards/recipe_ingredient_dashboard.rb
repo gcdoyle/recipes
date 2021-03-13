@@ -13,9 +13,11 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
       order: "name"
     ),
     id: Field::Number,
-    qty: Field::Number,
+    qty: Field::Number.with_options(
+      decimals: 2,
+    ),
     measure: Field::Select.with_options(
-      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal","clove","head","bunch"],
+      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal","clove","head","bunch","stalk"],
       include_blank: true,
       ),
     created_at: Field::DateTime,

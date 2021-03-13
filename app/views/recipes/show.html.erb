@@ -22,7 +22,7 @@
       <ul class="list-unstyled">
       <% @recipe.recipe_ingredients.each do |ingredient| %>
         <li>
-          <%= "#{ingredient.qty} #{ingredient.measure} #{ingredient.ingredient.name}" %>
+          <%= "#{strip_trailing_zero(ingredient.qty)} #{ingredient.measure} #{ingredient.ingredient.name}" %>
         </li>
       <% end %>
     </div>

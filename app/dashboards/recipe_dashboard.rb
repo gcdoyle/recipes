@@ -19,8 +19,12 @@ class RecipeDashboard < Administrate::BaseDashboard
     name: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    cooking_time: Field::Number,
-    prep_time: Field::Number,
+    cooking_time: Field::Number.with_options(
+      suffix: " minutes",
+    ),
+    prep_time: Field::Number.with_options(
+      suffix: " minutes",
+    ),
     servings: Field::Number,
     directions: Field::Trix,
   }.freeze
