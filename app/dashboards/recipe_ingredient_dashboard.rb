@@ -12,6 +12,7 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
     ingredient: Field::BelongsTo.with_options(
       order: "name"
     ),
+    note: Field::String,
     id: Field::Number,
     qty: Field::Number.with_options(
       decimals: 2,
@@ -55,6 +56,7 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
   ingredient
   qty
   measure
+  note
   ].freeze
 
   # COLLECTION_FILTERS

@@ -31,7 +31,7 @@ class Recipe < ApplicationRecord
   def self.search(q)
 	  if q
       ingredients = []
-	    @recipes = Recipe.find_by("lower(recipes.name) LIKE ?", "%#{q}%".downcase).to_a.uniq{|r| r}
+	    @recipes = Recipe.where("lower(recipes.name) LIKE ?", "%#{q}%".downcase).to_a.uniq{|r| r}
       Recipe.all.each do |recipe|
         recipe.ingredients.each do |i|
           @recipes << recipe if i.name.downcase.include?(q)
