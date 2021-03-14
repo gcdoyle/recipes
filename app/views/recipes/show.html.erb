@@ -23,7 +23,7 @@
       <% @recipe.recipe_ingredients.each do |ingredient| %>
         <li>
           <%= "#{strip_trailing_zero(ingredient.qty)} #{ingredient.measure} #{ingredient.ingredient.name}" %>
-          <%= ", #{ingredient.note}" if ingredient.note.present? %>
+          <%= "- #{ingredient.note}" if ingredient.note.present? %>
         </li>
       <% end %>
     </div>
