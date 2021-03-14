@@ -34,7 +34,7 @@ as well as a link to its edit page.
     ) if valid_action?(:new) && show_action?(:new, new_resource) %>
     
     <%= link_to(
-      t("administrate.actions.edit_resource", name: page.page_title),
+      t("administrate.actions.edit_resource", name: page.resource_name),
       [:edit, namespace, page.resource],
       class: "button",
     ) if valid_action?(:edit) && show_action?(:edit, page.resource) %>
