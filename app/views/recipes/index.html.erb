@@ -8,14 +8,13 @@
   <% @recipes.each do |recipe| %>
     <div class="col-4 card p-2" style="border: 0">
     
-      <div class="card-body p-0" style="border: solid #ccc 1px;border-radius:7px;overflow:hidden;">
-        <h4 class="card-title text-center p-2 mb-0" style="background-color: olive;">
+      <div class="card-body p-0">
+        <h4 class="card-title text-center p-2 mb-0">
           <%= link_to recipe.name, recipe, class: "stretched-link", style: "color: black" %>
         </h4>
         <p class="card-text">
           <%= image_tag recipe.image.variant(resize_to_limit: [240, 240]), 
-                                          class: "card-img-bottom",
-                                          style: "max-=height:240px;height:240px;max-width:100%;min-width:100%;width:100%"
+                                          class: "card-img-bottom"
                                           %>
         </p>
       </div>
