@@ -11,9 +11,11 @@
           <%= link_to recipe.name, recipe, class: "stretched-link", style: "color: black" %>
         </h4>
         <p class="card-text">
+         <% if card.values.first.image.attached? %>
           <%= image_tag recipe.image.variant(resize_to_limit: [240, 240]), 
                                           class: "card-img-bottom"
-                                          if card.values.first.image.present? %>
+                                          %>
+          <% end %>
         </p>
       </div>
     </div>
