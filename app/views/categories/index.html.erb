@@ -14,7 +14,7 @@
         <p class="card-text">
           <%= image_tag card.values.first.image.variant(resize_to_limit: [240, 240]), 
                                           class: "card-img-bottom"
-                                          %>
+                                          if image_tag card.values.first.image.present? %>
         </p>
       </div>
     </div>
