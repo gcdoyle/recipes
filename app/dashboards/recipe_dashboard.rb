@@ -37,6 +37,7 @@ class RecipeDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
   image
   name
+  updated_at
   categories
   ].freeze
 
