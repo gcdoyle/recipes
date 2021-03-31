@@ -22,13 +22,13 @@
       <ul class="list-unstyled">
       <% @recipe.recipe_ingredients.each do |ingredient| %>
         <li>
-          <%= "#{strip_trailing_zero(ingredient.qty)} #{ingredient.measure}" m%>
-        <% if ingredient.link.present? %>
-          <%= link_to ingredient.ingredient.name, ingredient.ingredient.link %>
+          <%= "#{strip_trailing_zero(ingredient.qty)} #{ingredient.measure}" %>
+        <% if ingredient.url.present? %>
+          <%= link_to ingredient.ingredient.name, ingredient.ingredient.url %>
         <% else %>
           <%=  ingredient.ingredient.name %>
         <% end %>
-          <%= "(#{ingredient.note})" if ingredient.note.present? %>
+          <%= ingredient.note if ingredient.note.present? %>
         </li>
       <% end %>
     </div>
