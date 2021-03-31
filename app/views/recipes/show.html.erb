@@ -28,7 +28,7 @@
         <% else %>
           <%=  ingredient.ingredient.name %>
         <% end %>
-          <%= ingredient.note if ingredient.note.present? %>
+          <%= ", #{ingredient.note}" if ingredient.note.present? %>
         </li>
       <% end %>
     </div>
