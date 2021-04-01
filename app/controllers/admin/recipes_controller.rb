@@ -6,7 +6,7 @@ module Admin
     def set_tabs
       @tab_names = ["recipe","ingredients","directions","categories"]
       @tab_content = {}
-      @tab_content["recipe"] = ["name", "image", "servings", "cooking_time", "prep_time", "description"]
+      @tab_content["recipe"] = ["name", "slug", "image", "servings", "cooking_time", "prep_time", "description"]
       @tab_content["ingredients"] = ["recipe_ingredients"]
       @tab_content["directions"] = ["directions"]
       @tab_content["categories"] = ["categories"]
