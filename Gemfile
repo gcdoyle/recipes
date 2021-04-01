@@ -37,6 +37,7 @@ gem 'bootstrap-select-rails'
 gem "popper_js", "~> 1.16.0"
 gem 'font-awesome-sass'
 gem 'mini_racer'
+gem 'mimemagic'
 
 gem 'devise'
 
