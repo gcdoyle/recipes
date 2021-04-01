@@ -59,6 +59,7 @@ class RecipeDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
   name
+  slug
   image
   description
   cooking_time
