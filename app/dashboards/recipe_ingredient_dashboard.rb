@@ -18,7 +18,7 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
       decimals: 2,
     ),
     measure: Field::Select.with_options(
-      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal","clove","head","bunch","stalk","leaf","pinch","dash","rack","slice"],
+      collection: ["cup","tsp","tbsp","oz","lb","qt","pt","gal","clove","head","bunch","stalk","rib","leaf","part","pinch","dash","rack","slice","splash","squirt"],
       include_blank: true,
       ),
     created_at: Field::DateTime,
