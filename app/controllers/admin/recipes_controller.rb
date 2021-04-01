@@ -19,7 +19,7 @@ module Admin
     end
 
     def default_sort
-      { order: :name, direction: :asc }
+      { order: :updated_at, direction: :asc }
     end
 
   end
