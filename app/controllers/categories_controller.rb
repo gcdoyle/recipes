@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   include SetInstance
 
   def index
-    @categories = Category.all
+    @categories = Category.where.not(name: :chris)
     @cards = []
     card = {}
     @categories.each do |category|
