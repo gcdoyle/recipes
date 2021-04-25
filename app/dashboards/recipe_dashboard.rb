@@ -13,7 +13,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     image: PhotoField,
     recipe_ingredients: Field::NestedHasMany.with_options(skip: :recipe),
     categories: Field::HasMany.with_options(
-      order: "name"
+      sort_by: "name"
     ),
     id: Field::Number,
     name: Field::String,
