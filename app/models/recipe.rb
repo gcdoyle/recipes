@@ -10,7 +10,12 @@ class Recipe < ApplicationRecord
   has_rich_text :description
   has_rich_text :directions
 
-  accepts_nested_attributes_for :recipe_ingredients
+  accepts_nested_attributes_for(
+    :recipe_ingredients,
+    reject_if: :all_blank,
+    allow_destroy: true
+  )
+  
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
   friendly_id :slug_candidates, use: :slugged
