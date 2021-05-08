@@ -17,7 +17,7 @@ addEventListener("trix-initialize", event => {
   inputElement.pattern = "(https?://|/).+"
 })
 
-$("#recipe-form").on("keyup keypress", function(e) {
+$(".ingredient-note").on("keyup keypress", function(e) {
   var keyCode = e.keyCode || e.which;
   if (keyCode === 13) { 
     e.preventDefault();

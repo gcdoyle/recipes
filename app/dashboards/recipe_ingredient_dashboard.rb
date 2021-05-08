@@ -13,7 +13,9 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
       order: "name",
       include_blank: true,
     ),
-    note: Field::String,
+    note: Field::String.with_options(
+      class: "ingredient-note"
+    ),
     id: Field::Number,
     qty: Field::Number.with_options(
       decimals: 2,
