@@ -10,7 +10,8 @@ class RecipeIngredientDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     recipe: Field::BelongsTo,
     ingredient: Field::BelongsTo.with_options(
-      order: "name"
+      order: "name",
+      include_blank: true,
     ),
     note: Field::String,
     id: Field::Number,

@@ -57,4 +57,8 @@ class CategoryDashboard < Administrate::BaseDashboard
   def display_resource(category)
     category.name
   end
+  
+  def default_sort
+    { order: :name, direction: :asc }
+  end
 end

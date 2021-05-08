@@ -24,3 +24,15 @@ $("#recipe-form").on("keyup keypress", function(e) {
     return false;
   }
 });
+
+$(document).on('click', '.field-unit--nested-has-many .add_fields', () => {
+  $(".field-unit--belongs-to select").each(function initializeSelectize(index, element) {
+    var $element = $(element);
+    $element.selectize({});
+  });
+  $(".field-unit--select select").each(function initializeSelectize(index, element) {
+    var $element = $(element);
+    $element.selectize({});
+  });
+});
+
